@@ -2,6 +2,25 @@
 
 A Machine Learning project that predicts whether Bitcoin's next closing price will increase using Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN), with data visualization, feature engineering, and model evaluation.
 
+## Overview
+
+This project analyzes historical Bitcoin price data and uses Machine Learning classification algorithms to predict the direction of the next closing price.
+
+The project uses a dataset containing Bitcoin's opening, highest, lowest, and closing prices. Data visualization and feature engineering are performed to explore price movements and prepare the input features.
+
+Three Machine Learning models are trained and evaluated:
+
+* Logistic Regression
+* Decision Tree
+* K-Nearest Neighbors (KNN)
+
+The models are evaluated using **ROC-AUC**, which measures their ability to distinguish between upward and non-upward price movements.
+
+
+
+
+
+
 
 ## Author
 
