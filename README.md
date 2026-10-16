@@ -1,7 +1,6 @@
-# bitcoin prediction with machine learning
+# ₿ Bitcoin Price Direction Prediction using Machine Learning
 
-in this version is working on how to normalize the data and try to find a prediction of the next data prize. first concentration is on is it higher than the yesterday or not.
-
+A Machine Learning project that predicts whether Bitcoin's next closing price will increase using Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN), with data visualization, feature engineering, and model evaluation.
 
 
 ## Author
