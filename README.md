@@ -117,6 +117,18 @@ df['is_quarter_end'] = (
 )
 ```
 
+### Target Creation
+
+The target is created by comparing the current closing price with the next available closing price.
+
+```python
+df['target'] = np.where(
+    df['Close'].shift(-1) > df['Close'], 1, 0
+)
+```
+
+The final row is removed because its next closing price is not available.
+
 
 
 
