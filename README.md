@@ -16,6 +16,22 @@ Three Machine Learning models are trained and evaluated:
 
 The models are evaluated using **ROC-AUC**, which measures their ability to distinguish between upward and non-upward price movements.
 
+## Features
+
+* Bitcoin historical price analysis
+* Closing-price visualization using a logarithmic scale
+* Price distribution visualization
+* Yearly average price analysis
+* Target distribution visualization
+* Date-based feature extraction
+* Feature engineering
+* Min-Max-free standardization using `StandardScaler`
+* Chronological train/validation split
+* Logistic Regression classification
+* Decision Tree classification
+* K-Nearest Neighbors classification
+* ROC-AUC evaluation
+* Model performance comparison
 
 
 
