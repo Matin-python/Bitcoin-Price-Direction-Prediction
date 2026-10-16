@@ -155,6 +155,19 @@ Earlier observations are used for training, while later observations are used fo
 A one-row gap is left at the split boundary because each target depends on the following day's closing price.
 
 
+### Feature Scaling
+
+`StandardScaler` is used to standardize the input features.
+
+The scaler is fitted only on the training data and then applied to the validation data.
+
+This prevents information from the validation period from influencing the scaling parameters.
+
+
+## Data Visualization
+
+
+
 
 
 ## Author
