@@ -100,6 +100,23 @@ df['day'] = splitted[2].astype('int')
 
 These features allow the project to analyze price information over time.
 
+### Feature Engineering
+
+Two additional features are created using the daily prices:
+
+```python
+df['open-close'] = df['Open'] - df['Close']
+df['low-high'] = df['Low'] - df['High']
+```
+
+An additional feature identifies actual quarter-end dates:
+
+```python
+df['is_quarter_end'] = (
+    pd.to_datetime(df['Date']).dt.is_quarter_end.astype(int)
+)
+```
+
 
 
 
