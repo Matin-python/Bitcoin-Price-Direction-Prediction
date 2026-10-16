@@ -33,6 +33,15 @@ The models are evaluated using **ROC-AUC**, which measures their ability to dist
 * ROC-AUC evaluation
 * Model performance comparison
 
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+
 
 
 
