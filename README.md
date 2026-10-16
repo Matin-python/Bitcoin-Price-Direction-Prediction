@@ -82,6 +82,24 @@ It represents the direction of the next closing price:
 The goal is to predict price direction rather than the exact future price in dollars.
 
 
+## Data Preprocessing
+
+Several preprocessing steps are performed before training the models.
+
+### Date Feature Extraction
+
+The `Date` column is used to extract year, month, and day.
+
+```python
+splitted = df['Date'].str.split('-', expand=True)
+
+df['year'] = splitted[0].astype('int')
+df['month'] = splitted[1].astype('int')
+df['day'] = splitted[2].astype('int')
+```
+
+These features allow the project to analyze price information over time.
+
 
 
 
