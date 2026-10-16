@@ -129,6 +129,30 @@ df['target'] = np.where(
 
 The final row is removed because its next closing price is not available.
 
+### Feature Selection
+
+Three engineered features are used to train the models:
+
+```python
+features = df[
+    ['open-close', 'low-high', 'is_quarter_end']
+]
+
+target = df['target']
+```
+
+### Train/Validation Split
+
+The dataset is divided chronologically:
+
+```text
+85% → Training data
+15% → Validation data
+```
+
+Earlier observations are used for training, while later observations are used for validation. This helps evaluate how the models perform on a later time period.
+
+A one-row gap is left at the split boundary because each target depends on the following day's closing price.
 
 
 
