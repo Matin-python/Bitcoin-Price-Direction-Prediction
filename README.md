@@ -194,6 +194,16 @@ The average opening, highest, lowest, and closing prices are grouped by year and
   <img src="screenshots/yearly_average_prices.png" width="700">
 </p>
 
+### Target Distribution
+
+A pie chart illustrates the proportion of observations where the next closing price increases and where it does not increase.
+
+<p align="center">
+  <img src="screenshots/target_distribution.png" width="500">
+</p>
+
+
+
 
 
 
