@@ -260,6 +260,16 @@ DecisionTreeClassifier()
 
 The model can learn nonlinear relationships between the input features and the target.
 
+### 3. K-Nearest Neighbors (KNN)
+
+K-Nearest Neighbors classifies price direction based on nearby samples in the training data.
+
+```python
+KNeighborsClassifier()
+```
+
+The input features are standardized before training so that their scales are more comparable for distance-based classification.
+
 
 
 
