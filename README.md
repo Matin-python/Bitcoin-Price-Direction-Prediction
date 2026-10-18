@@ -178,6 +178,14 @@ The logarithmic scale helps visualize substantial price changes across different
   <img src="screenshots/bitcoin_close_log.png" width="700">
 </p>
 
+### Price Distribution
+
+Histograms with density curves are used to explore the distributions of the opening, highest, lowest, and closing prices.
+
+<p align="center">
+  <img src="screenshots/price_distributions.png" width="700">
+</p>
+
 
 
 
