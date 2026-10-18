@@ -236,6 +236,20 @@ Compare Model Performance
 ```
 
 
+## Models
+
+Three Machine Learning classification algorithms are used in this project.
+
+### 1. Logistic Regression
+
+Logistic Regression is used to classify whether the next closing price will be higher than the current closing price.
+
+```python
+LogisticRegression(max_iter=10000)
+```
+
+The model estimates the probability of the next closing price increasing.
+
 
 
 
