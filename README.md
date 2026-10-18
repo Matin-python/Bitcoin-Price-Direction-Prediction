@@ -271,6 +271,24 @@ KNeighborsClassifier()
 The input features are standardized before training so that their scales are more comparable for distance-based classification.
 
 
+## Model Training
+
+The three models are trained using the same training dataset.
+
+```python
+models = [
+    LogisticRegression(max_iter=10000),
+    DecisionTreeClassifier(),
+    KNeighborsClassifier()
+]
+
+for i in range(3):
+    models[i].fit(X_train, Y_train)
+```
+
+After training, each model produces predictions and probability estimates for the training and validation datasets.
+
+
 
 
 
