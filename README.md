@@ -166,6 +166,18 @@ This prevents information from the validation period from influencing the scalin
 
 ## Data Visualization
 
+The project includes several visualizations to explore Bitcoin price behavior.
+
+### Bitcoin Closing Price
+
+A line plot displays the historical closing price over time using a logarithmic vertical axis.
+
+The logarithmic scale helps visualize substantial price changes across different price levels.
+
+<p align="center">
+  <img src="screenshots/bitcoin_close_log.png" width="700">
+</p>
+
 
 
 
