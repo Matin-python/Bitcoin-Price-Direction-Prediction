@@ -186,6 +186,13 @@ Histograms with density curves are used to explore the distributions of the open
   <img src="screenshots/price_distributions.png" width="700">
 </p>
 
+### Yearly Average Prices
+
+The average opening, highest, lowest, and closing prices are grouped by year and visualized using bar charts.
+
+<p align="center">
+  <img src="screenshots/yearly_average_prices.png" width="700">
+</p>
 
 
 
