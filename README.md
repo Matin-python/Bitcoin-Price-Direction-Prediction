@@ -250,6 +250,16 @@ LogisticRegression(max_iter=10000)
 
 The model estimates the probability of the next closing price increasing.
 
+### 2. Decision Tree
+
+A Decision Tree classifier learns decision rules from the engineered features to predict the direction of the next closing price.
+
+```python
+DecisionTreeClassifier()
+```
+
+The model can learn nonlinear relationships between the input features and the target.
+
 
 
 
