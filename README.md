@@ -203,6 +203,40 @@ A pie chart illustrates the proportion of observations where the next closing pr
 </p>
 
 
+## Machine Learning Workflow
+
+The project follows the workflow below:
+
+```text
+Bitcoin Dataset
+       ↓
+Data Exploration
+       ↓
+Price Visualization
+       ↓
+Date Feature Extraction
+       ↓
+Feature Engineering
+       ↓
+Create Target Variable
+       ↓
+Select Input Features
+       ↓
+Chronological Train/Validation Split
+       ↓
+Standardize Features
+       ↓
+Train Machine Learning Models
+       ↓
+Generate Predictions
+       ↓
+Evaluate ROC-AUC
+       ↓
+Compare Model Performance
+```
+
+
+
 
 
 
