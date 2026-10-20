@@ -327,6 +327,24 @@ Validation ROC-AUC: X.XXXX
 The exact results depend on the dataset and the selected model parameters.
 
 
+## Project Structure
+
+```text
+Bitcoin-Price-Direction-Prediction/
+│
+├── screenshots/
+│   ├── bitcoin_close_log.png
+│   ├── price_distributions.png
+│   ├── yearly_average_prices.png
+│   └── target_distribution.png
+│
+├── bitcoin.csv
+├── bitcoin_prediction.py
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+
 
 
 
