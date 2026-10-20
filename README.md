@@ -388,6 +388,19 @@ scikit-learn
 ```
 
 
+## Future Improvements
+
+* Add accuracy, precision, recall, and F1-score
+* Add confusion matrices
+* Compare model ROC-AUC scores in a bar chart
+* Experiment with additional price-based features
+* Add rolling returns and volatility features
+* Apply time-series cross-validation
+* Tune model hyperparameters
+* Compare predictions against a simple baseline
+* Explore backtesting while accounting for transaction costs and financial risk
+
+
 
 
 ## Author
