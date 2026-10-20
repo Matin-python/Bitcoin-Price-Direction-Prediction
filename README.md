@@ -375,6 +375,20 @@ python bitcoin_prediction.ipynb
 The program will display the price visualizations, train the three classification models, and print their training and validation ROC-AUC scores.
 
 
+## Requirements
+
+The main dependencies are:
+
+```text
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+```
+
+
+
 
 ## Author
 
