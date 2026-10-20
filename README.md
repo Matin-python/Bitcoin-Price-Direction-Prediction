@@ -289,6 +289,25 @@ for i in range(3):
 After training, each model produces predictions and probability estimates for the training and validation datasets.
 
 
+## Evaluation
+
+The models are evaluated using **ROC-AUC (Area Under the Receiver Operating Characteristic Curve)**.
+
+ROC-AUC evaluates how well a classifier distinguishes between the two target classes using predicted probabilities.
+
+```python
+metrics.roc_auc_score(
+    Y_valid,
+    models[i].predict_proba(X_valid)[:, 1]
+)
+```
+
+Two ROC-AUC scores are calculated for each model:
+
+* **Training ROC-AUC** — evaluates performance on the training data.
+* **Validation ROC-AUC** — evaluates performance on the later validation period.
+
+
 
 
 
