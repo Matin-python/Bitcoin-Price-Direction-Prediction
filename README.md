@@ -346,6 +346,20 @@ Bitcoin-Price-Direction-Prediction/
 ```
 
 
+## Installation
+
+Install the required Python libraries using:
+
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn
+```
+
+You can also install the dependencies from the requirements file:
+
+```bash
+pip install -r requirements.txt
+```
+
 
 
 ## Author
