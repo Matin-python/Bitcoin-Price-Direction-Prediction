@@ -339,7 +339,7 @@ Bitcoin-Price-Direction-Prediction/
 │   └── target_distribution.png
 │
 ├── bitcoin.csv
-├── bitcoin_prediction.py
+├── bitcoin_prediction.ipynb
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -359,6 +359,20 @@ You can also install the dependencies from the requirements file:
 ```bash
 pip install -r requirements.txt
 ```
+
+
+## How to Run
+
+1. Make sure Python is installed.
+2. Place `bitcoin.csv` in the project directory.
+3. Install the required libraries.
+4. Run the Python script:
+
+```bash
+python bitcoin_prediction.ipynb
+```
+
+The program will display the price visualizations, train the three classification models, and print their training and validation ROC-AUC scores.
 
 
 
