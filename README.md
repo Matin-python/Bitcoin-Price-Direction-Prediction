@@ -307,6 +307,24 @@ Two ROC-AUC scores are calculated for each model:
 * **Training ROC-AUC** — evaluates performance on the training data.
 * **Validation ROC-AUC** — evaluates performance on the later validation period.
 
+### Example Output
+
+```text
+============================================================
+LogisticRegression(max_iter=10000)
+Training ROC-AUC:   X.XXXX
+Validation ROC-AUC: X.XXXX
+
+DecisionTreeClassifier()
+Training ROC-AUC:   X.XXXX
+Validation ROC-AUC: X.XXXX
+
+KNeighborsClassifier()
+Training ROC-AUC:   X.XXXX
+Validation ROC-AUC: X.XXXX
+```
+
+The exact results depend on the dataset and the selected model parameters.
 
 
 
