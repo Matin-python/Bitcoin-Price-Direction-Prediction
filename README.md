@@ -408,6 +408,12 @@ Contributions are welcome.
 You can improve the feature engineering, add new classification algorithms, improve the evaluation process, or add new visualizations to the project.
 
 
+## License
+
+This project is licensed under the **MIT License**.
+
+See the `LICENSE` file for more information.
+
 
 ## Author
 
