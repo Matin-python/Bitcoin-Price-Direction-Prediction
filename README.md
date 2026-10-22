@@ -401,6 +401,12 @@ scikit-learn
 * Explore backtesting while accounting for transaction costs and financial risk
 
 
+## Contributing
+
+Contributions are welcome.
+
+You can improve the feature engineering, add new classification algorithms, improve the evaluation process, or add new visualizations to the project.
+
 
 
 ## Author
