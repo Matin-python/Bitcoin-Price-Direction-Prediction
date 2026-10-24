@@ -172,11 +172,16 @@ The project includes several visualizations to explore Bitcoin price behavior.
 
 A line plot displays the historical closing price over time using a logarithmic vertical axis.
 
+<p align="center">
+  <img src="screenshots/bitcoin_close_price.png" width="1000">
+</p>
+
 The logarithmic scale helps visualize substantial price changes across different price levels.
 
 <p align="center">
-  <img src="screenshots/bitcoin_close_log.png" width="700">
+  <img src="screenshots/bitcoin_close_log.png" width="1000">
 </p>
+
 
 ### Price Distribution
 
