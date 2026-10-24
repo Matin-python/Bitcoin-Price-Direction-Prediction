@@ -1,21 +1,24 @@
 # ₿ Bitcoin Price Direction Prediction using Machine Learning
 
-A Machine Learning project that predicts whether Bitcoin's next closing price will increase using Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN), with data visualization, feature engineering, and model evaluation.
-
+A Machine Learning project that predicts whether Bitcoin's next closing price will increase using Logistic Regression, Decision Tree, K-Nearest Neighbors (KNN), Support Vector Machine (SVM), and XGBoost, with data visualization, feature engineering, and model performance comparison.
 
 ## Overview
 
 This project analyzes historical Bitcoin price data and uses Machine Learning classification algorithms to predict the direction of the next closing price.
 
-The project uses a dataset containing Bitcoin's opening, highest, lowest, and closing prices. Data visualization and feature engineering are performed to explore price movements and prepare the input features.
+The project explores Bitcoin price movements through data visualization, extracts date-based features, and creates additional features from daily price differences.
 
-Three Machine Learning models are trained and evaluated:
+Five Machine Learning classification models are trained and evaluated:
 
-* Logistic Regression
-* Decision Tree
-* K-Nearest Neighbors (KNN)
+- Logistic Regression
+- Decision Tree
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
+- XGBoost
 
-The models are evaluated using **ROC-AUC**, which measures their ability to distinguish between upward and non-upward price movements.
+The models are evaluated using ROC-AUC, accuracy, precision, recall, and F1-score. Their performance is compared using a results table and a bar chart.
+
+The main implementation is provided as a **Jupyter Notebook**, allowing the code, visualizations, model training, and evaluation results to be explored step by step.
 
 
 ## Features
