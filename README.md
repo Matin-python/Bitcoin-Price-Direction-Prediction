@@ -60,20 +60,20 @@ The main implementation is provided as a **Jupyter Notebook**, allowing the code
 The project uses the following dataset:
 
 ```text
-bitcoin.csv
+bitcoin (1).csv
 ```
 
-The dataset contains historical Bitcoin price information, including the following features:
+The dataset contains historical Bitcoin price information, including:
 
-| Feature | Description             |
-| ------- | ----------------------- |
-| `Date`  | Date of the observation |
-| `Open`  | Opening price           |
-| `High`  | Highest price           |
-| `Low`   | Lowest price            |
-| `Close` | Closing price           |
+| Feature | Description |
+|---|---|
+| `Date` | Date of the observation |
+| `Open` | Opening price |
+| `High` | Highest price |
+| `Low` | Lowest price |
+| `Close` | Closing price |
 
-The project assumes the dataset is already ordered chronologically, from oldest to newest.
+The dataset is expected to be ordered chronologically, from oldest to newest, for the time-based validation approach used in the project.
 
 The target variable is:
 
@@ -88,16 +88,16 @@ It represents the direction of the next closing price:
 0 → Next closing price is not higher
 ```
 
-The goal is to predict price direction rather than the exact future price in dollars.
+The project predicts **price direction rather than the exact future Bitcoin price in dollars**.
 
 
 ## Data Preprocessing
 
-Several preprocessing steps are performed before training the models.
+Several preprocessing and feature engineering steps are performed before training the models.
 
 ### Date Feature Extraction
 
-The `Date` column is used to extract year, month, and day.
+The `Date` column is used to extract year, month, and day information.
 
 ```python
 splitted = df['Date'].str.split('-', expand=True)
@@ -107,18 +107,18 @@ df['month'] = splitted[1].astype('int')
 df['day'] = splitted[2].astype('int')
 ```
 
-These features allow the project to analyze price information over time.
+These features can be used to analyze historical price patterns over time.
 
 ### Feature Engineering
 
-Two additional features are created using the daily prices:
+Two additional features are created using the daily price information:
 
 ```python
 df['open-close'] = df['Open'] - df['Close']
 df['low-high'] = df['Low'] - df['High']
 ```
 
-An additional feature identifies actual quarter-end dates:
+The project also creates an `is_quarter_end` feature to identify actual calendar quarter-end dates.
 
 ```python
 df['is_quarter_end'] = (
@@ -128,7 +128,7 @@ df['is_quarter_end'] = (
 
 ### Target Creation
 
-The target is created by comparing the current closing price with the next available closing price.
+The target is created by comparing each day's closing price with the following day's closing price.
 
 ```python
 df['target'] = np.where(
@@ -136,11 +136,11 @@ df['target'] = np.where(
 )
 ```
 
-The final row is removed because its next closing price is not available.
+The final row is removed because its next closing price is unavailable, meaning its target cannot be determined.
 
 ### Feature Selection
 
-Three engineered features are used to train the models:
+Three engineered features are selected for model training:
 
 ```python
 features = df[
@@ -150,23 +150,24 @@ features = df[
 target = df['target']
 ```
 
-### Train/Validation Split
+### Chronological Train/Validation Split
 
-The dataset is divided chronologically:
+The dataset is divided into training and validation sets based on time:
 
 ```text
 85% → Training data
 15% → Validation data
 ```
 
-Earlier observations are used for training, while later observations are used for validation. This helps evaluate how the models perform on a later time period.
+Earlier observations are used for training, while later observations are reserved for validation.
 
-A one-row gap is left at the split boundary because each target depends on the following day's closing price.
+This approach is more appropriate for estimating future-period performance than randomly shuffling historical observations.
 
+A one-row gap is left at the split boundary so that the last training target does not depend on the first validation day's closing price.
 
 ### Feature Scaling
 
-`StandardScaler` is used to standardize the input features.
+`StandardScaler` is used to standardize the selected features.
 
 The scaler is fitted only on the training data and then applied to the validation data.
 
