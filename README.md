@@ -400,27 +400,29 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+xgboost
+jupyter
 ```
 
 
 ## Future Improvements
 
-* Add accuracy, precision, recall, and F1-score
-* Add confusion matrices
-* Compare model ROC-AUC scores in a bar chart
-* Experiment with additional price-based features
-* Add rolling returns and volatility features
-* Apply time-series cross-validation
-* Tune model hyperparameters
-* Compare predictions against a simple baseline
-* Explore backtesting while accounting for transaction costs and financial risk
+- Add time-series cross-validation
+- Experiment with additional price-based features
+- Add rolling returns and volatility indicators
+- Tune model hyperparameters
+- Compare additional classification algorithms
+- Add confusion matrices
+- Save and compare results across multiple validation periods
+- Compare models against a simple baseline
+- Explore backtesting with transaction costs and risk management
 
 
 ## Contributing
 
 Contributions are welcome.
 
-You can improve the feature engineering, add new classification algorithms, improve the evaluation process, or add new visualizations to the project.
+You can improve the feature engineering, add new classification algorithms, improve the evaluation process, or add additional visualizations to the project.
 
 
 ## License
