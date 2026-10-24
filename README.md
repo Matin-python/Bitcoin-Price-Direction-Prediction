@@ -23,30 +23,36 @@ The main implementation is provided as a **Jupyter Notebook**, allowing the code
 
 ## Features
 
-* Bitcoin historical price analysis
-* Closing-price visualization using a logarithmic scale
-* Price distribution visualization
-* Yearly average price analysis
-* Target distribution visualization
-* Date-based feature extraction
-* Feature engineering
-* Min-Max-free standardization using `StandardScaler`
-* Chronological train/validation split
-* Logistic Regression classification
-* Decision Tree classification
-* K-Nearest Neighbors classification
-* ROC-AUC evaluation
-* Model performance comparison
+- Bitcoin historical price analysis
+- Closing-price visualization using a logarithmic scale
+- Price distribution analysis
+- Yearly average price visualization
+- Target distribution visualization
+- Date-based feature extraction
+- Feature engineering
+- Feature scaling using `StandardScaler`
+- Chronological training and validation split
+- Logistic Regression classification
+- Decision Tree classification
+- K-Nearest Neighbors classification
+- Support Vector Machine classification
+- XGBoost classification
+- ROC-AUC evaluation
+- Accuracy, precision, recall, and F1-score evaluation
+- Model comparison table
+- Model comparison bar chart with numerical labels
 
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- Jupyter Notebook
 
 
 ## Dataset
