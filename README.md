@@ -176,42 +176,41 @@ This prevents information from the validation period from influencing the scalin
 
 ## Data Visualization
 
-The project includes several visualizations to explore Bitcoin price behavior.
+The project includes several visualizations to explore Bitcoin price behavior and the prepared dataset.
 
 ### Bitcoin Closing Price
 
-A line plot displays the historical closing price over time using a logarithmic vertical axis.
+A line plot displays historical Bitcoin closing prices over time using a logarithmic vertical axis.
+
+The logarithmic scale helps visualize large price movements across different price levels.
 
 <p align="center">
   <img src="screenshots/bitcoin_close_price.png" width="1000">
 </p>
 
-The logarithmic scale helps visualize substantial price changes across different price levels.
-
 <p align="center">
   <img src="screenshots/bitcoin_close_log.png" width="1000">
 </p>
 
-
 ### Price Distribution
 
-Histograms with density curves are used to explore the distributions of the opening, highest, lowest, and closing prices.
+Histograms with density curves are used to visualize the distributions of opening, highest, lowest, and closing prices.
 
 <p align="center">
-  <img src="screenshots/price_distributions.png" width="700">
+  <img src="screenshots/price_distributions.png" width="1000">
 </p>
 
 ### Yearly Average Prices
 
-The average opening, highest, lowest, and closing prices are grouped by year and visualized using bar charts.
+The average opening, highest, lowest, and closing prices are grouped by year and displayed using bar charts.
 
 <p align="center">
-  <img src="screenshots/yearly_average_prices.png" width="700">
+  <img src="screenshots/yearly_average_prices.png" width="1000">
 </p>
 
 ### Target Distribution
 
-A pie chart illustrates the proportion of observations where the next closing price increases and where it does not increase.
+A pie chart displays the proportion of observations where the next closing price increases and where it does not increase.
 
 <p align="center">
   <img src="screenshots/target_distribution.png" width="500">
@@ -233,21 +232,21 @@ Date Feature Extraction
        ↓
 Feature Engineering
        ↓
-Create Target Variable
+Target Creation
        ↓
-Select Input Features
+Feature Selection
        ↓
 Chronological Train/Validation Split
        ↓
-Standardize Features
+Feature Scaling
        ↓
-Train Machine Learning Models
+Train Five Classification Models
        ↓
-Generate Predictions
+Generate Predictions and Scores
        ↓
-Evaluate ROC-AUC
+Evaluate Performance
        ↓
-Compare Model Performance
+Compare Models
 ```
 
 
