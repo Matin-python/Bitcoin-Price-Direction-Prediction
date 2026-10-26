@@ -306,40 +306,48 @@ After training, each model produces predictions and probability estimates for th
 
 ## Evaluation
 
-The models are evaluated using **ROC-AUC (Area Under the Receiver Operating Characteristic Curve)**.
+The project uses five metrics to compare model performance.
 
-ROC-AUC evaluates how well a classifier distinguishes between the two target classes using predicted probabilities.
+### ROC-AUC
 
-```python
-metrics.roc_auc_score(
-    Y_valid,
-    models[i].predict_proba(X_valid)[:, 1]
-)
-```
+ROC-AUC measures how effectively a model distinguishes between upward and non-upward price movements using its predicted scores.
 
-Two ROC-AUC scores are calculated for each model:
+Both training ROC-AUC and validation ROC-AUC are calculated.
 
-* **Training ROC-AUC** — evaluates performance on the training data.
-* **Validation ROC-AUC** — evaluates performance on the later validation period.
+### Accuracy
+
+Accuracy measures the proportion of validation samples classified correctly using the model's default classification threshold.
+
+### Precision
+
+Precision measures the proportion of predicted upward movements that were actually followed by a higher closing price.
+
+### Recall
+
+Recall measures the proportion of actual upward movements correctly identified by the model.
+
+### F1-Score
+
+The F1-score combines precision and recall into a single metric. It is useful for evaluating the balance between these two measures.
 
 ### Example Output
 
+The notebook prints the following results for each model:
+
 ```text
 ============================================================
-LogisticRegression(max_iter=10000)
+Logistic Regression
 Training ROC-AUC:   X.XXXX
 Validation ROC-AUC: X.XXXX
-
-DecisionTreeClassifier()
-Training ROC-AUC:   X.XXXX
-Validation ROC-AUC: X.XXXX
-
-KNeighborsClassifier()
-Training ROC-AUC:   X.XXXX
-Validation ROC-AUC: X.XXXX
+Validation Accuracy: X.XXXX
+Validation Precision: X.XXXX
+Validation Recall:    X.XXXX
+Validation F1-score:  X.XXXX
 ```
 
-The exact results depend on the dataset and the selected model parameters.
+The same evaluation process is applied to Decision Tree, KNN, SVM, and XGBoost.
+
+Actual results depend on the dataset and model configuration.
 
 
 ## Project Structure
@@ -348,10 +356,12 @@ The exact results depend on the dataset and the selected model parameters.
 Bitcoin-Price-Direction-Prediction/
 │
 ├── screenshots/
+│   ├── bitcoin_close_price.png
 │   ├── bitcoin_close_log.png
 │   ├── price_distributions.png
 │   ├── yearly_average_prices.png
-│   └── target_distribution.png
+│   ├── target_distribution.png
+│   └── model_comparison.png
 │
 ├── bitcoin.csv
 ├── bitcoin_prediction.ipynb
@@ -359,6 +369,8 @@ Bitcoin-Price-Direction-Prediction/
 ├── LICENSE
 └── README.md
 ```
+
+The main project file is `bitcoin_prediction.ipynb`. It contains the data exploration, visualizations, feature engineering, model training, evaluation, and model comparison.
 
 
 ## Installation
