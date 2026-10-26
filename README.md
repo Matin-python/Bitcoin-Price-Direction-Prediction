@@ -350,6 +350,31 @@ The same evaluation process is applied to Decision Tree, KNN, SVM, and XGBoost.
 Actual results depend on the dataset and model configuration.
 
 
+## Model Comparison
+
+The results are collected into a Pandas DataFrame and sorted by validation ROC-AUC.
+
+The comparison table includes:
+
+- Model name
+- Training ROC-AUC
+- Validation ROC-AUC
+- Validation accuracy
+- Validation precision
+- Validation recall
+- Validation F1-score
+
+A bar chart is also created to compare the validation ROC-AUC scores of the five models.
+
+<p align="center">
+  <img src="screenshots/model_comparison.png" width="800">
+</p>
+
+Numerical labels are displayed above the bars to make it easier to compare the exact values.
+
+**Validation ROC-AUC is used as the primary comparison metric**, while the other metrics provide additional information about the models' classification performance.
+
+
 ## Project Structure
 
 ```text
