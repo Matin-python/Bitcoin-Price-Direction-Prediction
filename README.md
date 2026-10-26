@@ -252,56 +252,74 @@ Compare Models
 
 ## Models
 
-Three Machine Learning classification algorithms are used in this project.
+Five Machine Learning classification algorithms are used in this project.
 
 ### 1. Logistic Regression
 
-Logistic Regression is used to classify whether the next closing price will be higher than the current closing price.
+Logistic Regression is used to estimate the probability that the next closing price will be higher than the current closing price.
 
 ```python
 LogisticRegression(max_iter=10000)
 ```
 
-The model estimates the probability of the next closing price increasing.
+The model provides probability estimates that can be used to calculate ROC-AUC.
 
 ### 2. Decision Tree
 
-A Decision Tree classifier learns decision rules from the engineered features to predict the direction of the next closing price.
+A Decision Tree classifier learns decision rules from the selected features to predict the direction of the next closing price.
 
 ```python
-DecisionTreeClassifier()
+DecisionTreeClassifier(random_state=42)
 ```
 
-The model can learn nonlinear relationships between the input features and the target.
+Decision Trees can learn nonlinear relationships between the input features and the target.
 
 ### 3. K-Nearest Neighbors (KNN)
 
-K-Nearest Neighbors classifies price direction based on nearby samples in the training data.
+K-Nearest Neighbors classifies price direction based on the nearest samples in the training data.
 
 ```python
 KNeighborsClassifier()
 ```
 
-The input features are standardized before training so that their scales are more comparable for distance-based classification.
+Feature scaling is particularly important for KNN because its predictions depend on distances between samples.
 
+### 4. Support Vector Machine (SVM)
+
+The project uses an SVM classifier with an RBF kernel.
+
+```python
+SVC(kernel='rbf')
+```
+
+The RBF kernel allows SVM to learn nonlinear decision boundaries.
+
+The model uses its decision scores to calculate ROC-AUC rather than requiring probability estimates.
+
+### 5. XGBoost
+
+XGBoost is included as a gradient-boosted tree classification algorithm.
+
+```python
+XGBClassifier(
+    random_state=42,
+    eval_metric='logloss'
+)
+```
+
+XGBoost builds an ensemble of decision trees sequentially to improve classification performance.
+
+---
 
 ## Model Training
 
-The three models are trained using the same training dataset.
+All five models use the same training and validation datasets to make the comparison more consistent.
 
-```python
-models = [
-    LogisticRegression(max_iter=10000),
-    DecisionTreeClassifier(),
-    KNeighborsClassifier()
-]
+Each model is trained using the training data and then evaluated on the later validation period.
 
-for i in range(3):
-    models[i].fit(X_train, Y_train)
-```
+ROC-AUC is calculated using predicted probabilities when available, or decision scores for models such as SVM.
 
-After training, each model produces predictions and probability estimates for the training and validation datasets.
-
+---
 
 ## Evaluation
 
@@ -478,4 +496,3 @@ See the `LICENSE` file for more information.
 Electrical Engineering (Electronics) Graduate
 
 Interested in Python Development, Machine Learning, Computer Vision, Artificial Intelligence, and Data Science.
-
