@@ -363,13 +363,13 @@ Bitcoin-Price-Direction-Prediction/
 
 ## Installation
 
-Install the required Python libraries using:
+Install the required libraries using:
 
 ```bash
-pip install numpy pandas matplotlib seaborn scikit-learn
+pip install numpy pandas matplotlib seaborn scikit-learn xgboost jupyter
 ```
 
-You can also install the dependencies from the requirements file:
+You can also install all dependencies using:
 
 ```bash
 pip install -r requirements.txt
@@ -381,13 +381,16 @@ pip install -r requirements.txt
 1. Make sure Python is installed.
 2. Place `bitcoin.csv` in the project directory.
 3. Install the required libraries.
-4. Run the Python script:
+4. Open Jupyter Notebook:
 
 ```bash
-python bitcoin_prediction.ipynb
+jupyter notebook
 ```
 
-The program will display the price visualizations, train the three classification models, and print their training and validation ROC-AUC scores.
+5. Open `bitcoin_prediction.ipynb`.
+6. Run the notebook cells from top to bottom.
+
+The notebook will display the price visualizations, prepare the features, train the five classifiers, calculate the evaluation metrics, and compare the results using a table and a bar chart.
 
 
 ## Requirements
